@@ -18,7 +18,9 @@ The shell can be used for simple tasks like creating an empty folder and for lau
 
 Using the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you. It can be daunting at first, but once you've come familiar with this different style of interacting, you will be able to efficiently accomplish a huge variety of tasks.
 
-#### Let's get started
+---
+
+## Let's get started
 
 When the shell is first opened, you are represented with a **prompt**, indicating that shell is waiting for input.
 
@@ -32,37 +34,24 @@ Basic command lines table:
 | ----------- | ------ |
 | ls | This command will list the contents of the current directory |
 | ls -F | **-F option** tells **ls** to classify the output by adding a marker to file and directory names to indicate what they are. a) a trailing **/** indicates that this is a directory b) **@** indicates a link c) **\*** indicates an executable |
+| ls -a | Shows all files including hidden ones |
+| ls -s | Display the size of files and directories alongside the names |
+| ls -S | Sort the files and directories by size |
 | pwd | Stands for '**print working directory**'. Shows current working directory |
 | clear | Clears the terminal. |
 | clear -x | Clears the terminal and still allows access to previous commands by using the up and down arrow key |
-| 
+| cd {directory} | Stands for 'change directory', it changes the shell's current working directory. If just inputted without any argument following the command, it sets the home directory as the working directory |
+| cd .. | Move's back a directory by one level |
+| mkdir {name} | Makes directory in the current working directory |
+| mkdir -p | **-p** option allows **mkdir** to create a directory with nested subdirectories in a single operation |
+| nano {name}.txt | **nano** is a text editor. It can only work with plain character data, not tables, images, or any other human-friendly media. |
+| mv {directory}/{name}.txt {directory}{name}.txt | **mv** argument allows us to move the first argument **dir/example.txt** to move to the another location **dir2/example2.txt**. In this process it allows us to rename the file name as well. If we were to keep it in the same directory but save it as a new txt name, it will work as the same as to renaming the file. It will silently overwrite any existing file with the same name, which could lead to data loss. So use with caution! |
+| cp | **cp** command works very much like mv, except it copies a file instead of moving it |
+| cp -r | **-r** or **--recursive** option for cp applies the command not just to the specified directory but to all of it's content |
+| rm {file} | Removes the file from the directory |
+| rm -r {directory} | **-r** to remove a directory |
+| touch {file} | Used to create or update files |
 
----
-
-# Exercise 
-
-To practice using the CLI commands, we're going to follow an exercise provided in the Unix Shell course designed by the Software Carpentry Foundation.
-
-The resources we'll be using has been unzipped and added to the project folder at OdinProjectFoundations/shell-lesson-data
-
-**Nelle’s Pipeline: A Typical Problem**
-Nelle Nemo, a marine biologist, has just returned from a six-month survey of the North Pacific Gyre, where she has been sampling gelatinous marine life in the Great Pacific Garbage Patch. She has 1520 samples that she’s run through an assay machine to measure the relative abundance of 300 proteins. She needs to run these 1520 files through an imaginary program called goostats.sh. In addition to this huge task, she has to write up results by the end of the month, so her paper can appear in a special issue of Aquatic Goo Letters.
-
-If Nelle chooses to run goostats.sh by hand using a GUI, she’ll have to select and open a file 1520 times. If goostats.sh takes 30 seconds to run each file, the whole process will take more than 12 hours of Nelle’s attention. With the shell, Nelle can instead assign her computer this mundane task while she focuses her attention on writing her paper.
-
-The next few lessons will explore the ways Nelle can achieve this. More specifically, the lessons explain how she can use a command shell to run the goostats.sh program, using loops to automate the repetitive steps of entering file names, so that her computer can work while she writes her paper.
-
-As a bonus, once she has put a processing pipeline together, she will be able to use it again whenever she collects more data.
-
-In order to achieve her task, Nelle needs to know how to:
-
-- navigate to a file/directory
-- create a file/directory
-- check the length of a file
-- chain commands together
-- retrieve a set of files
-- iterate over files
-- run a shell script containing her pipeline
 
 ---
 
