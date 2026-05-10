@@ -65,4 +65,4 @@ The filesystem looks like an upside down tree. The topmost directory is the **ro
 
 Inside that directory are several other directories: **bin** (which is where some built in programs are stored), **data** (for miscellaneous data files), **Users** (where users' personal directories are located), **tmp** (for temporary files that don't need to be stored long-term), and so on.
 
-We know that our current working directory **/Users/JohnDoe** is stored inside **/Users** because **/Users** is the first part of its name. Similarly, we know that **/Users** is stored inside the root directory **/** because the name begins with **/**.
+We know that our current working directory **/Users/JohnDoe** is stored inside **/Users** because **/Users** is the first part of its name. Similarly, we know that **/Users** is stored inside the root directory **/** because the name begins with **/**. 
