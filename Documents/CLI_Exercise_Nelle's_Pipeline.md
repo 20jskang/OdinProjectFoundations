@@ -53,4 +53,4 @@ To see all of those files, she can press Tab twice more.
 ls north-pacific-gyre/goo
 goodiff.sh  goostats.sh
 
-This is called tab completion, and we will see it in many other tools as we go on.
+This is called tab completion, and we will see it in many other tools as we go on. 
