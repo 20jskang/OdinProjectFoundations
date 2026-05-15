@@ -2,7 +2,7 @@
 
 To practice using the CLI commands, we're going to follow an exercise provided in the Unix Shell course designed by the Software Carpentry Foundation.
 
-The resources we'll be using have been unzipped and added to the project folder at:
+The resources we'll be using have been unzipped and added to the project folder at: 
 
 ```bash
 OdinProjectFoundations/shell-lesson-data
