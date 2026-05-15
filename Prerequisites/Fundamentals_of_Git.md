@@ -27,7 +27,7 @@ Many people's version-control method of choice is to copy files into another dir
 To deal with this issue, programmers long ago developed a local VCSs that had a simple database that kept all the changes to files under revision control.
 
 <p align="center">
-    <img src="/Documents/assets/localVCS.png" alt="Local VCS">
+    <img src="/Prerequisites/assets/localVCS.png" alt="Local VCS">
     <p>Figure 1. Local version control diagram</p>
  </p>
 
@@ -40,7 +40,7 @@ One of the most popular VCS tools was a system called RCS, which is still distri
 The next major issue that people encounter is that they need to collaborate with developers on other systems. To deal with this problem, Centralised Version Control System (CVCS) were developed. These systems (such as CVS, Subversion, and Perforce) have a single server that contains all the versioned files, and a number of clients that check out files from that central place. For many years, this has been the standard for version control.
 
 <p align="center">
-    <img src="/Documents/assets/centralisedVCS.png" alt="Centralised VCS">
+    <img src="/Prerequisites/assets/centralisedVCS.png" alt="Centralised VCS">
     <p>Figure 2. Centralised version control system</p>
  </p>
 
@@ -55,7 +55,7 @@ The next major issue that people encounter is that they need to collaborate with
  This is where Distributed Version Control System (DVCSs) step in. In a DVCS (such as Git, Mercurial or Darcs), clients don't just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. Thus, if any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it. Every clone is really a full backup of all the data.
 
  <p align="center">
-    <img src="/Documents/assets/distributedVCS.png" alt="Distributed VCS">
+    <img src="/Prerequisites/assets/distributedVCS.png" alt="Distributed VCS">
     <p>Figure 3. Distributed version control system</p>
  </p>
 
@@ -91,14 +91,14 @@ The major difference between Git and any other VCS is the way Git thinks about i
 
 
  <p align="center">
-    <img src="/Documents/assets/checkinsOverTime1.png" alt="Checkins Over Time 1">
+    <img src="/Prerequisites/assets/checkinsOverTime1.png" alt="Checkins Over Time 1">
     <p>Figure 4. Storing data as changes to a base version of each filem</p>
  </p>
 
  Git doesn't think of or store its data this way. Instead, Git thinks of its data more like a series of snapshots of a miniature file system. With Git, everytime you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changes, Git doesn't store the file again, just to link to the previous identical file it has already stored. Git thinks about its data more like a **stream of snapshots**.
 
  <p align="center">
-    <img src="/Documents/assets/checkinsOverTime2.png" alt="Checkins Over Time 2">
+    <img src="/Prerequisites/assets/checkinsOverTime2.png" alt="Checkins Over Time 2">
     <p>Figure 5. Storing data as snapshots of the project over time</p>
  </p>
 
@@ -135,7 +135,7 @@ Pay attention! Now, here is the main thing to remember about Git if you want the
 This leads us to the three main sections of a Git project: the working tree, the staging area, and the Git directory
 
  <p align="center">
-    <img src="/Documents/assets/workingTree.png" alt="Git Working Tree">
+    <img src="/Prerequisites/assets/workingTree.png" alt="Git Working Tree">
     <p>Figure 6. Working tree, staging area, and Git directory</p>
  </p>
 
