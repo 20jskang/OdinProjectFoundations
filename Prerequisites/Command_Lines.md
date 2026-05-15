@@ -2,67 +2,156 @@
 
 ---
 
-## What is a Shell?
+# What is a Shell?
 
-Humans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a graphical user interface (GUI). With GUI, we give instructions by clicking a mouse and using menu-driven interactions.
+Humans and computers commonly interact in many different ways, such as through:
+- a keyboard and mouse
+- touch screen interfaces
+- speech recognition systems
+
+The most widely used way to interact with personal computers is called a **graphical user interface (GUI)**.
+
+With a GUI, we give instructions by:
+- clicking a mouse
+- using menu-driven interactions
 
 While the visual aid of a GUI makes it intuitive to learn, this way of interacting scales very poorly with some tasks.
 
-A **command-line interface (CLI)** allows users to interact with a computer by reading and writing text. It excels at making repetitive tasks automatic and fast.
+A **command-line interface (CLI)** allows users to interact with a computer by reading and writing text.
 
-A **shell** is a particular program that lets you type commands. We'll be using "Bash" which is the most popular Unix Shell to learn the CLI commands. Bash is often the default shell on Unix and in Unix-like tools for Windows.
+It excels at making repetitive tasks automatic and fast.
 
-### Why use the shell?
+A **shell** is a particular program that lets you type commands.
 
-The shell can be used for simple tasks like creating an empty folder and for launching (even complex) programs with a single command. In fact, some tools are resources such as cloud computing systems usually require users to be familiar with the shell. Shell commands can be combined and saved into reproducible scripts that automate repetitive tasks.
+We'll be using **Bash**, which is the most popular Unix Shell, to learn CLI commands.
 
-Using the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you. It can be daunting at first, but once you've come familiar with this different style of interacting, you will be able to efficiently accomplish a huge variety of tasks.
+Bash is often the default shell on Unix and in Unix-like tools for Windows.
 
 ---
 
-## Let's get started
+## Why use the shell?
 
-When the shell is first opened, you are represented with a **prompt**, indicating that shell is waiting for input.
+The shell can be used for:
+- simple tasks like creating an empty folder
+- launching complex programs with a single command
 
-The shell typically uses **$** as the prompt, but may use a different symbol. 
+In fact, some tools and resources such as cloud computing systems usually require users to be familiar with the shell.
 
-Note that some prompt might look a little different. In particular, most popular shell environment by default put your username and the host name before the $. 
+Shell commands can be:
+- combined together
+- saved into reproducible scripts
+- used to automate repetitive tasks
 
-Basic command lines table:
+Using the shell will take some effort and time to learn.
+
+While a GUI presents you with choices to select, CLI choices are not automatically presented to you.
+
+It can feel daunting at first, but once you become familiar with this style of interaction, you will be able to efficiently accomplish a huge variety of tasks.
+
+---
+
+# Let's get started
+
+When the shell is first opened, you are presented with a **prompt**, indicating that the shell is waiting for input.
+
+The shell typically uses:
+
+```bash
+$
+```
+
+as the prompt, but it may use a different symbol.
+
+Some prompts may look slightly different.
+
+Most popular shell environments display:
+- your username
+- the host name
+- followed by the `$`
+
+---
+
+# Basic Command Lines Table
 
 | CLI Command | Action |
 | ----------- | ------ |
-| ls | This command will list the contents of the current directory |
-| ls -F | **-F option** tells **ls** to classify the output by adding a marker to file and directory names to indicate what they are. a) a trailing **/** indicates that this is a directory b) **@** indicates a link c) **\*** indicates an executable |
-| ls -a | Shows all files including hidden ones |
-| ls -s | Display the size of files and directories alongside the names |
-| ls -S | Sort the files and directories by size |
-| pwd | Stands for '**print working directory**'. Shows current working directory |
-| clear | Clears the terminal. |
-| clear -x | Clears the terminal and still allows access to previous commands by using the up and down arrow key |
-| cd {directory} | Stands for 'change directory', it changes the shell's current working directory. If just inputted without any argument following the command, it sets the home directory as the working directory |
-| cd .. | Move's back a directory by one level |
-| mkdir {name} | Makes directory in the current working directory |
-| mkdir -p | **-p** option allows **mkdir** to create a directory with nested subdirectories in a single operation |
-| nano {name}.txt | **nano** is a text editor. It can only work with plain character data, not tables, images, or any other human-friendly media. |
-| mv {directory}/{name}.txt {directory}{name}.txt | **mv** argument allows us to move the first argument **dir/example.txt** to move to the another location **dir2/example2.txt**. In this process it allows us to rename the file name as well. If we were to keep it in the same directory but save it as a new txt name, it will work as the same as to renaming the file. It will silently overwrite any existing file with the same name, which could lead to data loss. So use with caution! |
-| cp | **cp** command works very much like mv, except it copies a file instead of moving it |
-| cp -r | **-r** or **--recursive** option for cp applies the command not just to the specified directory but to all of it's content |
-| rm {file} | Removes the file from the directory |
-| rm -r {directory} | **-r** to remove a directory |
-| touch {file} | Used to create or update files |
-
+| `ls` | Lists the contents of the current directory |
+| `ls -F` | `-F` option tells `ls` to classify output by adding markers to file and directory names:<br><br>- `/` indicates a directory<br>- `@` indicates a link<br>- `*` indicates an executable |
+| `ls -a` | Shows all files including hidden ones |
+| `ls -s` | Displays the size of files and directories alongside their names |
+| `ls -S` | Sorts files and directories by size |
+| `pwd` | Stands for **print working directory**. Shows the current working directory |
+| `clear` | Clears the terminal |
+| `clear -x` | Clears the terminal while still allowing access to previous commands using the arrow keys |
+| `cd {directory}` | Stands for **change directory**. Changes the shell's current working directory. If used without an argument, it changes to the home directory |
+| `cd ..` | Moves back one directory level |
+| `mkdir {name}` | Creates a directory in the current working directory |
+| `mkdir -p` | `-p` option allows `mkdir` to create nested subdirectories in a single operation |
+| `nano {name}.txt` | `nano` is a text editor. It works only with plain character data, not tables, images, or other media |
+| `mv {directory}/{name}.txt {directory}/{name}.txt` | `mv` moves files from one location to another. It can also rename files. Be careful: it silently overwrites existing files with the same name |
+| `cp` | Copies files instead of moving them |
+| `cp -r` | `-r` or `--recursive` applies `cp` to directories and all their contents |
+| `rm {file}` | Removes a file |
+| `rm -r {directory}` | Removes a directory recursively |
+| `touch {file}` | Creates or updates files |
 
 ---
 
-## File System Structure
+# File System Structure
 
 <p align="center">
   <img src="assets/fileSystemExample.png" alt="fileSystem Example">
 </p>
 
-The filesystem looks like an upside down tree. The topmost directory is the **root directory** that holds everything else. We refer to it using a slash character, **/**, on its own; this character is the leading slash in **/Users/JohnDoe**.
+The filesystem looks like an upside-down tree.
 
-Inside that directory are several other directories: **bin** (which is where some built in programs are stored), **data** (for miscellaneous data files), **Users** (where users' personal directories are located), **tmp** (for temporary files that don't need to be stored long-term), and so on.
+The topmost directory is called the **root directory**, which contains everything else.
 
-We know that our current working directory **/Users/JohnDoe** is stored inside **/Users** because **/Users** is the first part of its name. Similarly, we know that **/Users** is stored inside the root directory **/** because the name begins with **/**.
+We refer to it using:
+
+```bash
+/
+```
+
+This slash is also the leading slash in paths such as:
+
+```bash
+/Users/JohnDoe
+```
+
+Inside the root directory are several other directories:
+
+- `bin` → built-in programs
+- `data` → miscellaneous data files
+- `Users` → user personal directories
+- `tmp` → temporary files
+
+and many more.
+
+We know that our current working directory:
+
+```bash
+/Users/JohnDoe
+```
+
+is stored inside:
+
+```bash
+/Users
+```
+
+because `/Users` is the first part of the path.
+
+Similarly, we know that:
+
+```bash
+/Users
+```
+
+is stored inside the root directory:
+
+```bash
+/
+```
+
+because the path begins with `/`.
